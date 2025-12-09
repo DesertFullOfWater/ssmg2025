@@ -47,4 +47,4 @@ if YoN == "Yes" or YoN == "yes":
     time.sleep(1)
     print('话不多说，我们开始第一关：《与程序世界建立连接》')
     time.sleep(1)
-    print('')
+    print('使用输入输出函数链接程序世界')
