@@ -52,11 +52,14 @@ else:
     print('小小基础编程，你肯定可以轻松拿下的。')
 
 time.sleep(1)
-print('话不多说，我们开始第一关：《与程序世界建立连接》')
-print('任务加载中',end='')
+print('话不多说，任务即将开启，请准备')
+
 for i in range(50):
     time.sleep(0.1)
-    print('*',end='')
-print()
+    if i==24:
+        print('挑战程序世界',end='')
+    elif i==49:
+        print('第一关：《连接程序世界》',end='')
+    else:
+        print('*',end='')
 
-print('<<<<<<<<<<<程序世界探索>>>>>>>>>>>>第一关：连接程序世界')
