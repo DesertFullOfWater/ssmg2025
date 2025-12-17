@@ -3,6 +3,7 @@ import time
 time.sleep(0.5)
 print('********************************三穗民高2025级同学，你好! *********************************')
 
+'''
 time.sleep(1)
 print(input('请问你叫什么名字？'),'你好！')
 
@@ -65,7 +66,6 @@ for i in range(25):
     time.sleep(0.1)
     print('*',end='')
 time.sleep(0.1)
+print()
+'''
 print('第一关：《连接程序世界》')
-
-        
-
