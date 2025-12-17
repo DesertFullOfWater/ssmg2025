@@ -54,12 +54,18 @@ else:
 time.sleep(1)
 print('话不多说，任务即将开启，请准备')
 
-for i in range(50):
+for i in range(25):
     time.sleep(0.1)
-    if i==24:
-        print('挑战程序世界',end='')
-    elif i==49:
-        print('第一关：《连接程序世界》',end='')
-    else:
-        print('*',end='')
+    print('*',end='')
+    
+time.sleep(0.1)
+print('挑战程序世界',end='')
+
+for i in range(25):
+    time.sleep(0.1)
+    print('*',end='')
+time.sleep(0.1)
+print('第一关：《连接程序世界》')
+
+        
 
