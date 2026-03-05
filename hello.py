@@ -24,7 +24,7 @@ guide = ['欢迎来到程序世界！',
          '程序中奇怪的符号可能让你找不着北，',
          '但是……',
          '熟能生巧，百炼成钢',
-         '请大家跟随莎姐（木子老师）的节奏，勤加练习。',
+         '请大家跟随莎姐（艾莎公主）的节奏，勤加练习。',
          '你一定会发现程序世界的奇妙的！']
 
 #从引导词列表中逐句打印引导词
@@ -38,10 +38,10 @@ YoN = input('你准备好迎接编程世界的挑战了吗？（Yes/No）')
 
 #判断学生的挑战意愿，并输出对应鼓励话语
 if YoN == "Yes" or YoN == "yes" or YoN == 'YES':
-    time.sleep(1)
+    time.sleep(0.5)
     print('真不愧是三穗民高的勇士啊！')
 else:
-    time.sleep(1)
+    time.sleep(0.5)
     print('深吸一口气，大胆往前冲，你可是打败三穗50%少年的勇士呢！')
     time.sleep(1)
     print('所以……')
@@ -72,24 +72,45 @@ print('欢迎进入新手村')
 time.sleep(1)
 print('新手训练营第一关：《连接程序世界》')
 
-
+#模拟加载画面
 for i in range(50):
     time.sleep(0.1)
     print('*',end='')
 time.sleep(0.1)
 print()
 
+#任务讲解
 time.sleep(1)
 userName = input('这位勇士，请问阁下如何称呼？')
+time.sleep(1)
 print(userName,'你好！')
+time.sleep(1)
 print('程序世界的基本规则是：数据交换')
+time.sleep(1)
 print('也就是说你给应用程序数据，应用程序给你结果')
+time.sleep(1)
 print('中间的运算过程被应用程序所控制')
+time.sleep(1)
 print('与程序世界产生数据交换最简单的方法就是在程序中使用输入输出函数')
+time.sleep(1)
 print('接下来，请听系统讲解吧！')
-input()
 
+input()
+input('您听懂了吗？')
+print('接下来，你可以选择向系统提问，也可打开新手第一个任务进行训练。')
+
+#预告下一个任务
+input()
 print('恭喜你完成新手第一个任务')
 print('下一个任务预告：数据类型与变量')
 print(userName,'你有信心吗？')
-input()
+
+isbe = input()
+if isbe == "有":
+    time.sleep(0.5)
+    print('很好！我们下次见')
+else:
+    time.sleep(0.5)
+    print('没关系，系统会非常耐心解答你的疑惑的')
+    time.sleep(1)
+    print('加油！我们下次见')
