@@ -65,12 +65,13 @@ for i in range(25):
 time.sleep(0.1)
 print()
 
-
 #通过连接程序世界的方式，讲解输入输出函数
 print('第一关：《连接程序世界》')
-
+time.sleep(1)
+print('欢迎进入新手村')
 time.sleep(1)
 print('新手训练营第一关：《连接程序世界》')
+
 
 for i in range(50):
     time.sleep(0.1)
