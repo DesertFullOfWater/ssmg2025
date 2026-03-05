@@ -29,7 +29,7 @@ guide = ['欢迎来到程序世界！',
 
 #从引导词列表中逐句打印引导词
 for guideStr in guide:
-    time.sleep(1)
+    time.sleep(1.2)
     print(guideStr)
 
 #询问学生是否愿意接受程序的挑战
@@ -79,7 +79,7 @@ for i in range(50):
 time.sleep(0.1)
 print()
 
-#任务讲解
+#知识讲解
 time.sleep(1)
 userName = input('这位勇士，请问阁下如何称呼？')
 time.sleep(1)
