@@ -69,6 +69,9 @@ print()
 #通过连接程序世界的方式，讲解输入输出函数
 print('第一关：《连接程序世界》')
 
+time.sleep(1)
+print('新手训练营第一关：《连接程序世界》')
+
 for i in range(50):
     time.sleep(0.1)
     print('*',end='')
@@ -76,4 +79,16 @@ time.sleep(0.1)
 print()
 
 time.sleep(1)
-print(input('这位勇士，请问阁下如何称呼？'),'你好！')
+userName = input('这位勇士，请问阁下如何称呼？')
+print(userName,'你好！')
+print('程序世界的基本规则是：数据交换')
+print('也就是说你给应用程序数据，应用程序给你结果')
+print('中间的运算过程被应用程序所控制')
+print('与程序世界产生数据交换最简单的方法就是在程序中使用输入输出函数')
+print('接下来，请听系统讲解吧！')
+input()
+
+print('恭喜你完成新手第一个任务')
+print('下一个任务预告：数据类型与变量')
+print(userName,'你有信心吗？')
+input()
