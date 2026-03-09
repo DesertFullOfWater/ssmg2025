@@ -9,7 +9,7 @@
 
 import time
 【2】('欢迎光临艾莎公主奶茶店！') 
- naicinaName = 【3】('请问你想喝点什么？')        #naichaName 为奶茶的名字
+ naichaName = 【3】('请问你想喝点什么？')        #naichaName 为奶茶的名字
 
 【4】('请稍等')
 for i in range(50):
