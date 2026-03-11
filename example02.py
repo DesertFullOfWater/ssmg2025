@@ -124,9 +124,10 @@ graList = ['恭喜勇士掌握三种基本数据类型的名称',
            ]
 
 for graStr in graList:
-    time.sleep(0.1)
+    time.sleep(2)
     print(graStr)
 
+time.sleep(2)
 msg = '''      咏鹅
  [唐]骆宾王
 鹅，鹅，鹅，
@@ -135,7 +136,7 @@ msg = '''      咏鹅
 红掌拨清波。
 '''
 print(msg)
-print('在程序中还可以使用三引号包裹多行的字符串')
+print('在程序中还可以使用三引号包裹《咏鹅》这样的多行的字符串')
 
 for i in range(50):
     time.sleep(0.1)
