@@ -23,7 +23,6 @@ guide = ['勇士，欢迎回到程序世界！',
          '输入函数：input()，括号内为提示内容',
          '输出函数：print()，括号内为需要输出的内容',
          '接下来即将解锁新手训练营第二关：《数据与变量》']
-
 #从引导词列表中逐句打印引导词
 for guideStr in guide:
     time.sleep(2)
@@ -51,6 +50,7 @@ for graStr in graList:
     time.sleep(2)
     print(graStr)
 
+#知识点分割
 for i in range(50):
     time.sleep(0.1)
     print('*',end='')
@@ -64,50 +64,53 @@ graList = ['整数类型为又称int型，可表示数据：正/负整数、0。
            '布尔类型的数据用于比较运算与逻辑运算，我们会在下一关详细了解。',
            '以上，我们来小试牛刀一下吧！'
            ]
-
 for graStr in graList:
     time.sleep(2)
     print(graStr)
 
+#以下为小测试
+time.sleep(1)
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+#基本数据类型小测
+print('请问   0   在程序中是什么数据类型呢？',end='')
+test1_1 = input('请输入你的答案，用英文表示：')
+while test1_1 != 'int':
+    print('很遗憾，回答错误！')
+    test1_1 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+print('回答正确！小刀锋利程度+1。')
+print()
+
+print('请问   -5   在程序中是什么数据类型呢？',end='')
+test1_2 = input('请输入你的答案，用英文表示：')
+while test1_2 != 'int':
+    print('很遗憾，回答错误！')
+    test1_2 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+print('回答正确！小刀锋利程度+1。')
+print()
+
+print('请问  3.1415926  在程序中是什么数据类型呢？',end='')
+test1_3 = input('请输入你的答案，用英文表示：')
+while test1_3 != 'float':
+    print('很遗憾，回答错误！')
+    test1_3 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+print('回答正确！小刀锋利程度+1。')
+print()
+
+print('请问  True  在程序中是什么数据类型呢？',end='')
+test1_4 = input('请输入你的答案，用英文表示：')
+while test1_4 != 'bool':
+    print('很遗憾，回答错误！')
+    test1_4 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+print('回答正确！小刀锋利程度+1。')
+print()
+
+#知识点分割
 for i in range(50):
     time.sleep(0.1)
     print('*',end='')
 time.sleep(0.1)
 print()
-
-#基本数据类型小测
-print('请问   0   在程序中是什么数据类型呢？',end='')
-test1 = input('请输入你的答案，用英文表示：')
-while test1 != 'int':
-    print('很遗憾，回答错误！')
-    test1 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
-print('回答正确！小刀锋利程度+1。')
-print()
-
-print('请问   -5   在程序中是什么数据类型呢？',end='')
-test2 = input('请输入你的答案，用英文表示：')
-while test2 != 'int':
-    print('很遗憾，回答错误！')
-    test2 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
-print('回答正确！小刀锋利程度+1。')
-print()
-
-print('请问  3.1415926  在程序中是什么数据类型呢？',end='')
-test3 = input('请输入你的答案，用英文表示：')
-while test3 != 'float':
-    print('很遗憾，回答错误！')
-    test3 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
-print('回答正确！小刀锋利程度+1。')
-print()
-
-print('请问  True  在程序中是什么数据类型呢？',end='')
-test4 = input('请输入你的答案，用英文表示：')
-while test4 != 'bool':
-    print('很遗憾，回答错误！')
-    test4 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
-print('回答正确！小刀锋利程度+1。')
-print()
-
 
 #介绍字符串
 graList = ['恭喜勇士掌握三种基本数据类型的名称',
@@ -122,7 +125,6 @@ graList = ['恭喜勇士掌握三种基本数据类型的名称',
            "1.'这是一个字符串'",
            '2."这是一个字符串"'
            ]
-
 for graStr in graList:
     time.sleep(2)
     print(graStr)
@@ -137,7 +139,23 @@ msg = '''      咏鹅
 '''
 print(msg)
 print('在程序中还可以使用三引号包裹《咏鹅》这样的多行的字符串')
+time.sleep(2)
+print('但因与注释方式类似，需要慎用！！！')
 
+#以下为小测试
+time.sleep(1)
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+#基本数据类型小测
+print('请问在程序中使用一对单引号或者一对双引号包裹的数据，是什么数据类型呢？')
+test2_1 = input('请输入你的答案，用英文表示：')
+while test2_1 != 'str':
+    print('很遗憾，回答错误！')
+    test2_1 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+print('回答正确！小刀锋利程度+1。')
+print()
+
+#知识点分割
 for i in range(50):
     time.sleep(0.1)
     print('*',end='')
@@ -148,9 +166,9 @@ print()
 graList = ['了解四种常见的数据类型后',
            '在茫茫的数据海洋中，',
            '各位勇士该如何找到这些独立的数据呢？',
-           '????????????????????????????????',
+           '？？？？？？？？？？？？？？？？？？',
            '可以给需要多次用到的数据取一个名字哦！',
-           '使用“=”将名字与数据绑定起来即可 ',
+           '使用     “   =   ”     将名字与数据绑定起来即可 ',
            '比如:  a = 5、 name = "艾莎公主"',
            '以上 5 为数据，a是指向这个数据的名字',
            '"艾莎公主"是数据，name是指向这个数据的名字',
@@ -158,11 +176,24 @@ graList = ['了解四种常见的数据类型后',
            '在程序世界Python派称为变量名',
            '需要使用数据的时候，报变量名即可',
            '比如：a+1，print(name,"正在修仙")']
-
 for graStr in graList:
     time.sleep(2)
     print(graStr)
 
+#以下为小测试
+time.sleep(1)
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+#基本数据类型小测
+print('请问在 name = "艾莎公主" 这一句程序中，变量name指向的是什么类型的数据？')
+test2_2 = input('请输入你的答案，用英文表示：')
+while test2_2 != 'str':
+    print('很遗憾，回答错误！')
+    test2_2 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+print('回答正确！小刀锋利程度+1。')
+print()
+
+#知识点分割
 for i in range(50):
     time.sleep(0.1)
     print('*',end='')
@@ -175,22 +206,19 @@ graList = ['但是这变量名可不是乱起的，有以下三个规则',
            '2.可以包含字母、数字、下划线_',
            '3.不能使用Python关键字(如：input、print、int、float)',
            '好了，我们再来磨磨刀']
-
 for graStr in graList:
     time.sleep(2)
     print(graStr)
 
-for i in range(50):
-    time.sleep(0.1)
-    print('*',end='')
-time.sleep(0.1)
-print()
+#以下为小测试
+time.sleep(1)
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 print('请问 1a、@a、name、int 这四个词，哪个可以用作变量名呢？',end='')
-test5 = input('请输入你的答案，用英文表示：')
-while test5 != 'name':
+test3_1 = input('请输入你的答案，用英文表示：')
+while test3_1 != 'name':
     print('很遗憾，回答错误！')
-    test5 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+    test3_1 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
 print('回答正确！小刀锋利程度+1。')
 print()
 
@@ -202,13 +230,14 @@ print(a)
 '''
 print(msg)
 print('请问以上3行程序中，哪一个是变量呢？',end='')
-test6 = input('请输入你的答案，用英文表示：')
-while test6 != 'a':
+test3_2 = input('请输入你的答案，用英文表示：')
+while test3_2 != 'a':
     print('很遗憾，回答错误！')
-    test6 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
+    test3_2 = input('请结合前面的内容或呼叫公主殿下，继续作答！')
 print('回答正确！小刀锋利程度+1。')
 print()
 
-input('勇士，关于数据类型与变量，你听懂了吗？')
+print('恭喜！小刀已磨好！')
+input('勇士，关于数据类型与变量，你会用了吗？')
 print('接下来，你可以选择向系统提问，也可打开新手第二个任务进行训练。')
 input()
