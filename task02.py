@@ -25,8 +25,8 @@ while naichaName!='':
 if count>=5:
     print('您好！谢谢您的光顾，我再给您打个八折，您付', 【3】*0.8 ,'元即可')
 else:
-    print('您好！你的奶茶总计：',naichaPrice,'元！请支付')
-
+    print('您好！你的奶茶总计：',naichaPrice,'元！')
+print()
     
 '''
 2.计算柠檬水总价
