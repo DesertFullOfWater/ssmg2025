@@ -47,7 +47,7 @@ for guideStr in guide:
     time.sleep(2)
     print(guideStr)
 
-time.sleep(0.1)
+time.sleep(0.5)
 print()
 input('接下来，你可以针对对以上技能向公主殿下询问使用方法，也可直接按下回车键开启第二关')
 
