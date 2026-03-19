@@ -35,7 +35,7 @@ for i in range(50):
 time.sleep(0.1)
 print()
 
-input('请输入任意键，开启第二关')
+input('请输入Enter键，开启第二关')
 
 print()
 #知识讲解
