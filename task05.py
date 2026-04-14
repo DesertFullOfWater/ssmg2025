@@ -7,7 +7,7 @@
         在菜单内，则即刻制作奶茶，不在菜单内，则提示会继续加油
 
    请结合前面所得技能
-   删除以下程序里的序号“【1】、【2】、【3】”，填写正确代码，让程序正常运行
+   删除以下程序里的序号“【1】、【2】、【3】、【4】”，填写正确代码，让程序正常运行
 '''
 
 import time
@@ -22,11 +22,12 @@ print('''
 我们有：''')
 
 for i in range(len(【1】)):
-    print(str(i+1)+"."+orderList[i]+"\t￥"+str(priceList[i]))
+    #展示格式：1.幽兰拿铁      ￥18
+    print(str(i+1)+"."+orderList[【2】]+"\t￥"+str(priceList[i]))
 
 order = int(input("请输入您想喝的奶茶的序号："))-1
-【2】 0 <= order < len(orderList):
-    print("好的小主，一杯"+orderList[order]+"，共计"+str(【3】[order])+"元，请稍等！")
+【3】 0 <= order < len(orderList):
+    print("好的小主，一杯"+orderList[order]+"，共计"+str(【4】[order])+"元，请稍等！")
     print("制作中，请稍后",end="")
     for i in range(30):
         time.sleep(0.1)
