@@ -219,11 +219,15 @@ for graStr in graList:
     time.sleep(2.5)
     print(graStr)
 
+msg_test2 = ''' 以下是小测试2程序：
+heroes.append("李二狗")
+print(heroes.index("李二狗"))
+'''
 time.sleep(0.5)
-test2_1 = input(' 请问在以上heroes列表中，执行完  heroes.append("李二狗")  后，"李二狗"的下标为几呢？')
+test2_1 = input(' 请问以上小测试2程序，输出的结果是多少？')
 while test2_1 != '108':
     print('很遗憾，回答错误！请结合前面的内容仔细观察或呼叫公主殿下！')
-    test2_1 = input(' 执行完  heroes.append("李二狗")  后，"李二狗"的下标为几呢？')
+    test2_1 = input(' 请问以上小测试2程序，输出的结果是多少？')
 print('回答正确！链蛇软剑攻击力+1。')
 print()
 
