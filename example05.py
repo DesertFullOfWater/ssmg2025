@@ -219,11 +219,15 @@ for graStr in graList:
     time.sleep(2.5)
     print(graStr)
 
-msg_test2 = ''' 以下是小测试2程序：
+msg_test2 = '''
+       以下是小测试2程序：
 heroes.append("李二狗")
 print(heroes.index("李二狗"))
 '''
-time.sleep(0.5)
+
+time.sleep(2)
+print(msg_test2)
+time.sleep(2.5)
 test2_1 = input(' 请问以上小测试2程序，输出的结果是多少？')
 while test2_1 != '108':
     print('很遗憾，回答错误！请结合前面的内容仔细观察或呼叫公主殿下！')
@@ -385,7 +389,6 @@ for tem in hourly_temp_24h:
     sumTem+=tem
 
 print(sumTem/len(hourly_temp_24h))
-
 '''
 
 time.sleep(0.5)
@@ -394,7 +397,7 @@ print(msg_test5)
 graList = ['~~~~~~~~~~~~~~~~~~~   遍历列表  ~~~~~~~~~~~~~~~~~~~',
            '小测试5程序中，使用了上一关的 for 循环结构',
            msg_for1,
-           '小测试5程序中， in 后面的序列是4月14日每小时的温度列表 hourly_temp_24h',
+           '小测试5程序中， in 后面的序列是 4月14日每小时的温度列表 hourly_temp_24h',
            'for 后面的 循环控制变量tem 在循环中依次绑定 温度列表 hourly_temp_24h 的温度数据',
            '随即每次循环将 变量tem 绑定的温度数据，加到当日的总温度 sumTem 中',
            '循环结束后，使用  len()函数  获取hourly_temp_24h列表的元素个数',
@@ -413,9 +416,9 @@ print('回答正确！链蛇软剑攻击力+1。')
 print()
 
 #知识点分割
-print()
 time.sleep(2.5)
 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
+time.sleep(2.5)
 print('恭喜！链蛇软剑攻击力已加满！')
-print('接下来，你可以选择向系统提问，也可打开新手第五个任务进行训练。')
+time.sleep(2.5)
+print('接下来，你可以大胆地去完成新手村第五个任务了！')
