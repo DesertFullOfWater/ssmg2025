@@ -178,7 +178,9 @@ gramList = ['勇士！我们在新手村习得了一些函数技能',
             '连接程序世界的输入输出函数：input()、print()',
             '数据类型转换函数：int()、float()、str()',
             '集合操作函数：len()、max()、min()、sum()',
-            'range(start,stop,step)函数',]
+            'range(start,stop,step)函数',
+            '函数就是一段有名字、可重复使用、完成特定功能的代码块。',
+            '函数可以实现模块化，将复杂的程序拆成一个个小功能，清晰好维护。',]
 
 showMsg_list(gramList,2.5)
 
