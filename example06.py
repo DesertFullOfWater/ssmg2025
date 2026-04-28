@@ -44,6 +44,10 @@ def test(question,answer,award):
     print()
     return True
 
+def print_sleep(msg,t):
+    time.sleep(t)
+    print(msg)
+
 msg_data = '''        算术运算：
 \t除:/（有小数）\t取整：//（商的整数部分）\t取模：%（取除法竖式运算的余数部分）\t求幂：**（10**3，结果为：1000，10的3次方）',
         关系运算：判断关系运算符两边数据的关系，运算结果为：True或False。',
@@ -178,7 +182,7 @@ for i in range(50):
     print('*',end='')
 print()
 
-gramList = ['勇士！我们在新手村习得了一些函数技能',
+gramList_canshu = ['勇士！我们在新手村习得了一些函数技能',
             '连接程序世界的输入输出函数：','input()、print()',
             '数据类型转换函数：','int()、float()、str()',
             '集合操作函数：','len()、max()、min()、sum()',
@@ -198,12 +202,65 @@ gramList = ['勇士！我们在新手村习得了一些函数技能',
             '比如：range()函数',
             msg_range]
 
-showMsg_list(gramList,2.5)
+showMsg_list(gramList_canshu,2.5)
+
+#参数测试
+test('请问函数语句 range(5,100,5) 中有几个参数？','3','炼器炉火力值+1')
+
+#使用函数测试
+msg_test1 = '''以下是小测试1程序：
+scores = [99,89,67,100,55]
+max(scores)
+'''
+print_sleep(msg_test1,2)
+test('在以上小测试1程序中，使用了哪个函数(请输入函数名)？','max','炼器炉火力值+1')
+
+msg_hanshu1 = '''以下是攻击小怪
+def daXiaoGuai():
+    #实现函数功能的语句块
+    print('攻击小怪')
+    print('小怪掉血')
+'''
+
+msg_hanshu2 = '''以下是攻击小怪
+#定义函数 daXiaoGuai
+def daXiaoGuai():
+    #实现函数功能的语句块
+    print('攻击小怪')
+    print('小怪掉血')
+
+#使用函数 daXiaoGuai
+daXiaoGuai()
+'''
+
+gramList_define = [
+    '恭喜勇士，你已经会使用函数了！',
+    '接下来，你将很轻松地拥有属于自己的函数',
+    '~~~~~~~~~~~~~~~~~~~~~ 自定义函数 ~~~~~~~~~~~~~~~~~~~',
+    '首先，你需要给你的函数取一个与他的功能有关的名字',
+    '比如：打小怪 daXiaoGuai',
+    '然后在名字前面写上关键字 def',
+    'def daXiaoGuai',
+    '紧接着在函数名后面加一对英文的小括号',
+    'def daXiaoGuai()',
+    '最后在小括号后面加一个英文的冒号,换行后，即可编写实现该函数功能的程序了',
+    msg_hanshu1,
+    '以上是简单的攻击小怪的方法',
+    '定义了自己的函数以后，在程序中写函数名即可调用该函数',
+    msg_hanshu2
+    ]
+
+showMsg_list(gramList_define,2.5)
+
+test('请问以上daXiaoGuai()函数中，是否有参数(yes/no)?','no','炼器炉火力值+1')
+
+gramList_return = [
+    '勇士，在勇闯天涯的过程中，不同的小怪有不同的血量'
+    ]
+
 
 #知识点分割
-print()
-time.sleep(2.5)
-print('********************************************************************')
+print_sleep('********************************************************************',2)
 
 print('恭喜！链蛇软剑攻击力已加满！')
 print('接下来，你可以选择向系统提问，也可打开新手第五个任务进行训练。')
