@@ -187,6 +187,7 @@ gramList_canshu = ['勇士！我们在新手村习得了一些函数技能',
             '数据类型转换函数：','int()、float()、str()',
             '集合操作函数：','len()、max()、min()、sum()',
             'range(start,stop,step)函数',
+            '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
             '函数就是一段有名字、可重复使用、完成特定功能的代码块。',
             '函数可以实现模块化，将复杂的程序拆成一个个小功能，清晰好维护。',
             '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
@@ -215,21 +216,22 @@ max(scores)
 print_sleep(msg_test1,2)
 test('在以上小测试1程序中，使用了哪个函数(请输入函数名)？','max','炼器炉火力值+1')
 
-msg_hanshu1 = '''以下是攻击小怪
+msg_hanshu1 = '''
+
 def daXiaoGuai():
     #实现函数功能的语句块
     print('攻击小怪')
     print('小怪掉血')
 '''
 
-msg_hanshu2 = '''以下是攻击小怪
-#定义函数 daXiaoGuai
+msg_hanshu2 = '''
+#以下是自定义的攻击小怪函数
 def daXiaoGuai():
     #实现函数功能的语句块
     print('攻击小怪')
     print('小怪掉血')
 
-#使用函数 daXiaoGuai
+#使用函数 daXiaoGuai()
 daXiaoGuai()
 '''
 
@@ -246,7 +248,7 @@ gramList_define = [
     '最后在小括号后面加一个英文的冒号,换行后，即可编写实现该函数功能的程序了',
     msg_hanshu1,
     '以上是简单的攻击小怪的方法',
-    '定义了自己的函数以后，在程序中写函数名即可调用该函数',
+    '定义了自己的函数以后，在程序中写函数名即可使用该函数',
     msg_hanshu2
     ]
 
@@ -254,8 +256,45 @@ showMsg_list(gramList_define,2.5)
 
 test('请问以上daXiaoGuai()函数中，是否有参数(yes/no)?','no','炼器炉火力值+1')
 
+msg_hanshu3 = '''
+#以下是自定义的攻击小怪函数：带小怪血量参数
+def daXiaoGuai(blood):
+    #实现函数功能的语句块
+    print('当前小怪血量：',blood)
+    print('攻击小怪')
+    blood -= 10
+    print('小怪掉血-10,剩余血量：',blood)
+
+#使用函数 daXiaoGuai
+daXiaoGuai(100)
+'''
+msg_hanshu4 = '''
+#以下是自定义的攻击小怪函数：带小怪血量参数、小怪剩余血量的返回值
+def daXiaoGuai(blood):
+    #实现函数功能的语句块
+    print('当前小怪血量：',blood)
+    print('攻击小怪')
+    #血量减少
+    blood -= 10
+    print('小怪掉血-10,剩余血量：',blood)
+    return blood
+
+#使用函数 daXiaoGuai
+xiaoGuai_blood = 100
+while xiaoGuai_blood > 0:
+    xiaoGuai_blood = daXiaoGuai(xiaoGuai_blood)
+'''
 gramList_return = [
-    '勇士，在勇闯天涯的过程中，不同的小怪有不同的血量'
+    '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
+    '勇士，在勇闯天涯的过程中，不同的小怪有不同的血量',
+    '血量不同，勇士的攻击次数不同',
+    '我们可以在daXiaoGuai()函数中添加血量的参数 blood',
+    msg_hanshu3,
+    '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
+    '在函数中，攻击一次小怪后，小怪会掉一次血',
+    '是否继续攻击小怪，取决于小怪剩余血量',
+    '此时在函数中，可以在函数运行的最后使用  return 关键字返回小怪的剩余血量',
+    '函数运行后即可根据剩余血量判断是否继续攻击小怪'
     ]
 
 
