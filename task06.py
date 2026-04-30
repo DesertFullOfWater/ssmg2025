@@ -4,7 +4,7 @@
 1.模拟单杯奶茶销售过程
     1)展示奶茶店的所有奶茶与价格（奶茶店菜单展示）
     2)自定义函数：点奶茶
-        参数：奶茶名字，
+        参数：奶茶序号，
         询问奶茶的甜度与温度
     3)自定义函数：计算总价
 
@@ -17,26 +17,26 @@ import time
 #菜单列表：列表中每个元素是一个奶茶字典，封装每种奶茶的序号、姓名、价格。
 #        后续每个奶茶字典可加入原材料、制作过程等信息。
 milkTeaList = [
-    {"order":"01","name":"幽兰拿铁","price":18},
-    {"order":"02","name":"声声乌龙","price":16},
-    {"order":"03","name":"桂 花 弄","price":15},
-    {"order":"04","name":"筝筝纸鸢","price":16},
-    {"order":"05","name":"烟火易冷","price":17},
-    {"order":"06","name":"素颜锡兰","price":14},
-    {"order":"07","name":"抹茶菩提","price":18},
-    {"order":"08","name":"凤栖绿桂","price":15},
-    {"order":"09","name":"浮云沉香","price":16},
-    {"order":"10","name":"三 季 虫","price":19},
-    {"order":"11","name":"蔓越阑珊","price":17},
-    {"order":"12","name":"少 年 时","price":15},
-    {"order":"13","name":"不 知 冬","price":16},
-    {"order":"14","name":"书 生 气","price":14},
-    {"order":"15","name":"桃 花 坞","price":17},
-    {"order":"16","name":"琉璃沁雪","price":16},
-    {"order":"17","name":"点 绛 唇","price":18},
-    {"order":"18","name":"浣 溪 沙","price":15},
-    {"order":"19","name":"醉 仙 翁","price":19},
-    {"order":"20","name":"清 风 引","price":14}
+    {"No.":"01","name":"幽兰拿铁","price":18},
+    {"No.":"02","name":"声声乌龙","price":16},
+    {"No.":"03","name":"桂 花 弄","price":15},
+    {"No.":"04","name":"筝筝纸鸢","price":16},
+    {"No.":"05","name":"烟火易冷","price":17},
+    {"No.":"06","name":"素颜锡兰","price":14},
+    {"No.":"07","name":"抹茶菩提","price":18},
+    {"No.":"08","name":"凤栖绿桂","price":15},
+    {"No.":"09","name":"浮云沉香","price":16},
+    {"No.":"10","name":"三 季 虫","price":19},
+    {"No.":"11","name":"蔓越阑珊","price":17},
+    {"No.":"12","name":"少 年 时","price":15},
+    {"No.":"13","name":"不 知 冬","price":16},
+    {"No.":"14","name":"书 生 气","price":14},
+    {"No.":"15","name":"桃 花 坞","price":17},
+    {"No.":"16","name":"琉璃沁雪","price":16},
+    {"No.":"17","name":"点 绛 唇","price":18},
+    {"No.":"18","name":"浣 溪 沙","price":15},
+    {"No.":"19","name":"醉 仙 翁","price":19},
+    {"No.":"20","name":"清 风 引","price":14}
 ]
 
 #展示产品
@@ -44,6 +44,50 @@ print('''欢迎光临木子奶茶店，我们有：
 ''')
 
 for milkTea in milkTeaList:
-    #展示格式：1.幽兰拿铁      ￥18
-    print(milkTea['order']+"."+milkTea['name']+"\t￥"+str(milkTea['price']))
+    #展示格式：01.幽兰拿铁      ￥18
+    print(milkTea['No.']+"."+milkTea['name']+"\t￥"+str(milkTea['price']))
 
+'''
+点奶茶函数：milkTea_order
+参数：奶茶序号
+    询问用户奶茶甜度与温度
+返回值：奶茶信息字典
+'''
+def milkTea_order(_no):
+    #根据序号，从奶茶列表中获取当前奶茶字典信息
+    milkTea = milkTeaList[int(_no)-1]
+    #与用户确认奶茶姓名
+    print('您好！一杯',milkTea['name'])
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #展示奶茶糖分分类
+    print('我们有：',end='')
+    #奶茶糖分分类列表
+    sugarList = ['全糖','七分','五分','三分','无糖']
+    for i in range(len(sugarList)):
+        print(str(i+1)+'.'+sugarList[i]+'  ',end='')
+    # miklTeaSugarNo 绑定用户输入的当前奶茶的糖分序号 
+    miklTeaSugarNo = input('请问您需要几分糖(输入序号)？')
+    # 将当前奶茶的糖分信息，存入奶茶字典中
+    milkTea['sugar'] = sugarList[int(miklTeaSugarNo)-1]
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #展示奶茶温度分类
+    print('我们有：',end='')
+    #奶茶糖分分类列表
+    temList = ['加冰','少冰','去冰','常温','热']
+    for i in range(len(temList)):
+        print(str(i+1)+'.'+temList[i]+'  ',end='')
+    # miklTeaTemNo 绑定用户输入的当前奶茶的糖分序号 
+    miklTeaTemNo = input('请问您需要什么温度(输入序号)？')
+    # 将当前奶茶的糖分信息，存入奶茶字典中
+    milkTea['tem'] = temList[int(miklTeaTemNo)-1]
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')#分隔标记
+    return(milkTea)
+
+#milkTeaOrderList 用于存放用户已点的奶茶
+milkTeaOrderList = []
+milkTeaNo = input('请问小主需要喝点什么?')
+while milkTeaNo!='':
+    milkTea = milkTea_order(milkTeaNo)
+    milkTeaOrderList.append(milkTea)
+    milkTeaNo = input('请问小主还需要喝点什么(直接回车表示不再需要其他产品)?')
+print(milkTeaOrderList)
