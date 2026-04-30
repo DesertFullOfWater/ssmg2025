@@ -7,6 +7,12 @@
 import time
 
 #自定义函数
+
+#睡眠打印
+def print_sleep(msg,t):
+    time.sleep(t)
+    print(msg)
+    
 '''
 展示列表信息方法
 msgList        需要打印输出的列表
@@ -35,18 +41,14 @@ answer           问题的答案
 award             答对问题的奖励
 '''
 def test(question,answer,award):
-    time.sleep(0.5)
+    print_sleep('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^',2)
     test1_1 = input(question)
     while test1_1 != answer:
         print('很遗憾，回答错误！请结合前面的内容仔细观察或呼叫公主殿下！')
         test1_1 = input(question)
-    print(award)
+    print('回答正确!',award)
     print()
     return True
-
-def print_sleep(msg,t):
-    time.sleep(t)
-    print(msg)
 
 msg_data = '''        算术运算：
 \t除:/（有小数）\t取整：//（商的整数部分）\t取模：%（取除法竖式运算的余数部分）\t求幂：**（10**3，结果为：1000，10的3次方）',
@@ -166,9 +168,9 @@ for i in range(5):
 temList = [
     '',
     '~~~~~~~~~~~~~~~~~~    恭喜你！    ~~~~~~~~~~~~~~~~~',
-    '~~~~~~~~~~~~  通过新手村的试炼！！！~~~~~~~~~~~~',
+    '~~~~~~~~~~~~~~  通过新手村的试炼！！！ ~~~~~~~~~~~~~~',
     '',
-    '~~~~~~~~~~~~  解锁新道具：炼器炉  ~~~~~~~~~~~~~~',
+    '~~~~~~~~~~~~~~~  解锁新道具：炼器炉  ~~~~~~~~~~~~~~~',
     '接下来，你可以针对新手村的所有任务与技能向公主殿下询问使用方法，'
     ]
 showMsg_list(temList,1)
@@ -220,7 +222,7 @@ msg_hanshu1 = '''
 
 def daXiaoGuai():
     #实现函数功能的语句块
-    print('攻击小怪')
+    print('^~^~^~^~^~ 攻击小怪 ^~^~^~^~^~')
     print('小怪掉血')
 '''
 
@@ -228,7 +230,7 @@ msg_hanshu2 = '''
 #以下是自定义的攻击小怪函数
 def daXiaoGuai():
     #实现函数功能的语句块
-    print('攻击小怪')
+    print('^~^~^~^~^~ 攻击小怪 ^~^~^~^~^~')
     print('小怪掉血')
 
 #使用函数 daXiaoGuai()
@@ -254,6 +256,7 @@ gramList_define = [
 
 showMsg_list(gramList_define,2.5)
 
+test('请问定义函数的关键字是什么?','def','炼器炉火力值+1')
 test('请问以上daXiaoGuai()函数中，是否有参数(yes/no)?','no','炼器炉火力值+1')
 
 msg_hanshu3 = '''
@@ -261,7 +264,7 @@ msg_hanshu3 = '''
 def daXiaoGuai(blood):
     #实现函数功能的语句块
     print('当前小怪血量：',blood)
-    print('攻击小怪')
+    print('^~^~^~^~^~ 攻击小怪 ^~^~^~^~^~')
     blood -= 10
     print('小怪掉血-10,剩余血量：',blood)
 
@@ -273,10 +276,11 @@ msg_hanshu4 = '''
 def daXiaoGuai(blood):
     #实现函数功能的语句块
     print('当前小怪血量：',blood)
-    print('攻击小怪')
+    print('^~^~^~^~^~ 攻击小怪 ^~^~^~^~^~')
     #血量减少
     blood -= 10
     print('小怪掉血-10,剩余血量：',blood)
+    #返回剩余血量值
     return blood
 
 #使用函数 daXiaoGuai
@@ -294,12 +298,24 @@ gramList_return = [
     '在函数中，攻击一次小怪后，小怪会掉一次血',
     '是否继续攻击小怪，取决于小怪剩余血量',
     '此时在函数中，可以在函数运行的最后使用  return 关键字返回小怪的剩余血量',
-    '函数运行后即可根据剩余血量判断是否继续攻击小怪'
+    '函数运行后即可根据剩余血量判断是否继续攻击小怪',
+    msg_hanshu4
     ]
+showMsg_list(gramList_return,2.5)
+time.sleep(2)
 
+gramList_return = [
+    '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
+    '在以上程序中，',
+    'while循环中，每次执行完daXiaoGuai()函数后，',
+    '小怪血量的变量 xiaoGuai_blood 会重新绑定 daXiaoGuai()函数 的返回值',
+    '从而实现 攻击-掉血-判断血量-攻击-掉血-判断血量……的循环',
+    ]
+showMsg_list(gramList_return,2.5)
+
+test('请问在函数中设置返回值使用什么关键字？','return','炼器炉火力值+1')
 
 #知识点分割
 print_sleep('********************************************************************',2)
-
-print('恭喜！链蛇软剑攻击力已加满！')
-print('接下来，你可以选择向系统提问，也可打开新手第五个任务进行训练。')
+print_sleep('恭喜！链蛇软剑攻击力已加满！',1)
+print_sleep('接下来，你可以选择向系统提问，也可打开新手第六个任务进行训练。',1)
