@@ -1,13 +1,13 @@
 '''
 新手训练任务六：
 
-1.模拟单杯奶茶销售过程
+模拟奶茶销售过程
     1)展示奶茶店的所有奶茶与价格（奶茶店菜单展示）
-    2)自定义函数：点奶茶
+    2)自定义函数：点奶茶 milkTea_order()
         参数：奶茶序号，
         询问奶茶的甜度与温度
-    3)自定义函数：计算总价
-
+    3)自定义函数：计算总价 milkTea_order_sumPrice()
+    4)自定义函数：展示订单信息与总价
    请结合前面所得技能
    删除以下程序里的序号“【1】、【2】、【3】、【4】”，填写正确代码，让程序正常运行
 '''
@@ -48,10 +48,10 @@ for milkTea in milkTeaList:
     print(milkTea['No.']+"."+milkTea['name']+"\t￥"+str(milkTea['price']))
 
 '''
-点奶茶函数：milkTea_order
-参数：奶茶序号
-    询问用户奶茶甜度与温度
-返回值：奶茶信息字典
+*****点奶茶函数：milkTea_order()
+********参数：奶茶序号
+********功能：询问用户奶茶甜度、温度，将甜、温度存入已点奶茶字典
+******返回值：奶茶信息字典
 '''
 def milkTea_order(_no):
     #根据序号，从奶茶列表中获取当前奶茶字典信息
@@ -81,13 +81,45 @@ def milkTea_order(_no):
     # 将当前奶茶的糖分信息，存入奶茶字典中
     milkTea['tem'] = temList[int(miklTeaTemNo)-1]
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')#分隔标记
-    return(milkTea)
+    return milkTea
 
-#milkTeaOrderList 用于存放用户已点的奶茶
+'''
+***计算已点奶茶总价函数：milkTea_order_sumPrice()
+*************参数：已点奶茶列表
+*************功能：计算奶茶总价
+***********返回值：已点奶茶总价
+'''
+def 【1】(orderList):
+    sumPrice = 0
+    for order in orderList:
+        sumPrice += order['price']
+    return 【2】
+
+'''
+***显示已点奶茶信息信息函数：showOrderList
+*******************参数：已点奶茶列表
+*******************功能：按照固定格式显示已点奶茶信息
+*****************返回值：True 表示函数运行成功
+'''
+def showOrderList(orderList):
+    for order in orderList:
+        print(order['name']+'\t'+order['sugar']+'\t'+order['tem']+'\t￥'+str(order['price']))
+    print('共计：'+str(len(orderList))+'杯，总价：￥'+str(milkTea_order_sumPrice(orderList)))
+    【3】 True
+    
+#创建已点奶茶空列表 milkTeaOrderList ：用于存放用户已点的奶茶
 milkTeaOrderList = []
+
+#开始点奶茶
 milkTeaNo = input('请问小主需要喝点什么?')
+#如果奶茶序号不为空，则可以正常点单；
 while milkTeaNo!='':
+    #完成点一杯奶茶的操作
     milkTea = milkTea_order(milkTeaNo)
+    #将这个奶茶信息，存入已点奶茶列表
     milkTeaOrderList.append(milkTea)
+    #询问客户是否需要其他奶茶
     milkTeaNo = input('请问小主还需要喝点什么(直接回车表示不再需要其他产品)?')
-print(milkTeaOrderList)
+    
+#显示已点奶茶信息，与客户确认    
+showOrderList(【4】)
