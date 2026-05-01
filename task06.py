@@ -8,8 +8,8 @@
         询问奶茶的甜度与温度
     3)自定义函数：计算总价 milkTea_order_sumPrice()
     4)自定义函数：展示订单信息与总价
-   请结合前面所得技能
-   删除以下程序里的序号“【1】、【2】、【3】、【4】”，填写正确代码，让程序正常运行
+   请结合前面所得技能。
+   删除以下程序里的序号“【1】、【2】、【3】、【4】、【5】、【6】”，填写正确代码，让程序正常运行
 '''
 
 import time
@@ -42,10 +42,11 @@ milkTeaList = [
 #展示产品
 print('''欢迎光临木子奶茶店，我们有：
 ''')
-
+#遍历菜单列表milkTeaList，依次取出奶茶字典 milkTea
 for milkTea in milkTeaList:
     #展示格式：01.幽兰拿铁      ￥18
-    print(milkTea['No.']+"."+milkTea['name']+"\t￥"+str(milkTea['price']))
+    #使用  字典名[key] 的方式，找到对应的 value 值，如：milkTea['name']获取奶茶名字
+    print(milkTea['No.']+"."+【1】['name']+"\t￥"+str(milkTea['price']))
 
 '''
 *****点奶茶函数：milkTea_order()
@@ -89,11 +90,13 @@ def milkTea_order(_no):
 *************功能：计算奶茶总价
 ***********返回值：已点奶茶总价
 '''
-def 【1】(orderList):
+def 【2】(orderList):
+    #奶茶订单总价sumPrice 原始数据为0
     sumPrice = 0
     for order in orderList:
         sumPrice += order['price']
-    return 【2】
+    #将奶茶总价返回
+    return 【3】
 
 '''
 ***显示已点奶茶信息信息函数：showOrderList
@@ -101,11 +104,11 @@ def 【1】(orderList):
 *******************功能：按照固定格式显示已点奶茶信息
 *****************返回值：True 表示函数运行成功
 '''
-def showOrderList(orderList):
+【4】 showOrderList(orderList):
     for order in orderList:
         print(order['name']+'\t'+order['sugar']+'\t'+order['tem']+'\t￥'+str(order['price']))
     print('共计：'+str(len(orderList))+'杯，总价：￥'+str(milkTea_order_sumPrice(orderList)))
-    【3】 True
+    【5】 True
     
 #创建已点奶茶空列表 milkTeaOrderList ：用于存放用户已点的奶茶
 milkTeaOrderList = []
@@ -122,4 +125,4 @@ while milkTeaNo!='':
     milkTeaNo = input('请问小主还需要喝点什么(直接回车表示不再需要其他产品)?')
     
 #显示已点奶茶信息，与客户确认    
-showOrderList(【4】)
+showOrderList(【6】)
