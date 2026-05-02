@@ -8,10 +8,15 @@ import time
 
 #自定义函数
 
-#睡眠打印
-def print_sleep(msg,t):
-    time.sleep(t)
-    print(msg)
+'''
+睡眠打印字符串方法
+msg_str        需要打印输出的字符串
+stepTime    输出间隔时间
+'''
+def print_sleep(msg_str,stepTime):
+    time.sleep(stepTime)
+    print(msg_str)
+    return True
     
 '''
 展示列表信息方法
@@ -22,16 +27,6 @@ def showMsg_list(msgList,stepTime):
     for msg in msgList:
         time.sleep(stepTime)
         print(msg)
-    return True
-        
-'''
-展示字符串方法
-msg_str        需要打印输出的字符串
-stepTime    输出间隔时间
-'''
-def showMsg_str(msg_str,stepTime):
-    time.sleep(stepTime)
-    print(msg_str)
     return True
 
 '''
