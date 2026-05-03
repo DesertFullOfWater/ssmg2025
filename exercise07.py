@@ -43,6 +43,7 @@ print('你好！我可以查找水浒一百单八将的排名。')
 
 hero = 【1】('请输入你想查找的英雄名字：')
 try:
+    #查找输入的英雄的排序
     _no = heroes.index(hero)
 【2】 ValueError:
     print('很抱歉，英雄',hero,'不是宋江他们一边的。')
