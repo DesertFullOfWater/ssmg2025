@@ -18,8 +18,8 @@ scores = [78, 85, 92, 63, 71, 88, 95, 67, 74, 81,
 sumScore = 0 #记录总分
 
 #遍历分数列表，计算总分
-for score in scores:
-    sumScore += score
+for score in 【1】:
+    sumScore += 【2】
 
 #输出平均分
 print(【3】/len(scores))
@@ -35,7 +35,7 @@ print(【3】/len(scores))
    （2）删除以下程序里的序号“【1】、【2】、【3】、【4】、【5】”，填写正确代码，运行调试以下程序。
 '''
 
-
+'''
 import time
 
 #菜单与价格列表
@@ -46,9 +46,9 @@ orderList = ["幽兰拿铁","人间烟火","声声乌龙","可可芭蕾","四季
 print('欢迎光临木子奶茶店！')
 print('我们有：')
 
-for i in range(len(orderList)):
+for i in range(len(【2】)):
     #展示格式：1.幽兰拿铁      ￥18
-    print(str(i+1)+"."+orderList[i]+"\t￥"+str(priceList[i]))
+    print(str(i+1)+"."+orderList[【3】]+"\t￥"+str(priceList[i]))
 
 order = int(input("请输入您想喝的奶茶的序号："))-1
 【4】 0 <= order < len(orderList):
@@ -64,4 +64,4 @@ else:
     
 print("谢谢小主，欢迎下次光临！")
 
-
+'''
