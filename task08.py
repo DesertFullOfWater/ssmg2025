@@ -1,5 +1,5 @@
 '''
-训练任务七：
+训练任务八：
 
 模拟奶茶销售过程
     1)从奶茶菜单文件中读取奶茶信息，展示奶茶店的所有奶茶与价格（奶茶店菜单展示）
@@ -29,7 +29,7 @@ print('''欢迎光临木子奶茶店，我们有：
 
 milkTeaList = []
 # 读取奶茶菜单文件 奶茶菜单.csv，打印奶茶菜单
-with open("奶茶菜单.csv","r",encoding="utf-8-sig") as f:
+with open("08奶茶菜单.csv","r",encoding="utf-8-sig") as f:
     reader = csv.reader(f)
     for row in reader:
         milkTeaList.append(row)
@@ -122,3 +122,4 @@ showOrderList(milkTeaOrderList)
 with open("奶茶订单.csv","a",encoding="utf-8-sig") as f:
     writer = csv.writer(f)
     writer.writerows(milkTeaOrderList)
+print('订单已完成')
