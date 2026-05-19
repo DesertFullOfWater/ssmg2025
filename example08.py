@@ -229,21 +229,23 @@ test('在读取文件的第四步中，使用什么循环结构遍历读取对�
 
 gramList_csvWrite = [
     '以上是读取文件内容的四个步骤，',
-    '写入文件同样也是四个步骤，'
-    '第一步，使用open()函数打开文件'
+    '写入文件同样也是四个步骤，',
+    '第一步，使用open()函数打开文件',
     '\t不同的是，读取模式改为"w"或"a"',
-    '第二步，使用with ...  as ... 关键字将打开的文件保存在文件对象中，'
-    'with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:'
+    '第二步，使用with ...  as ... 关键字将打开的文件保存在文件对象中，',
+    'with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:',
     '第三步，导入csv模块，使用csv模块中的函数从文件对象中获取     写入对象    中。',
     '''
 import csv    #导入CSV模块
-with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:    #使用  末尾追加写入模式  打开heros.csv文件
+#使用  末尾追加写入模式  打开heros.csv文件
+with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:   
     writer = csv.writer(csvFile)     #获取写入对象
     ''',
     '第四步，将数据写入文件中。'
     '''
 import csv    #导入CSV模块
-with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:    #使用  末尾追加写入模式  打开heros.csv文件
+#使用  末尾追加写入模式  打开heros.csv文件
+with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:    
     writer = csv.writer(csvFile)     #获取写入对象
     writer.writerow(newHeroList)    #写入一行列表
     writer.writerows(newHerosList)    #写入多行列表
