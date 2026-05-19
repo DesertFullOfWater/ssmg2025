@@ -209,16 +209,16 @@ test('在上一行程序中，打开的是哪一个文件呢？','heros.csv','�
 test('在上一行程序中，打开的文件存放在程序的哪个文件对象中呢？','csvFile','葫芦装载值+1')
 
 gramList_csvRead = [
-    '第三步，导入csv模块，使用csv模块中的函数从文件对象中获取读取对象中。',
+    '第三步，导入csv模块，使用csv模块中的函数从文件对象中获取    读取对象    中。',
     '''
 import csv    #导入CSV模块
-with open("heros.csv", "r", encoding="utf-8-sig") as csvFile:
+with open("heros.csv", "r", encoding="utf-8-sig") as csvFile:    #使用读取模式打开heros.csv文件
     reader = csv.reader(csvFile)     #获取读取对象
     ''',
     '第四步，在程序中按行处理文件中的数据',
     '''
 import csv    #导入CSV模块
-with open("heros.csv", "r", encoding="utf-8-sig") as csvFile:
+with open("heros.csv", "r", encoding="utf-8-sig") as csvFile:    #使用读取模式打开heros.csv文件
     reader = csv.reader(csvFile)     #获取读取对象
     for row in reader:    #遍历读取对象，依次获取文件每一行的信息
         print(row)
@@ -226,6 +226,31 @@ with open("heros.csv", "r", encoding="utf-8-sig") as csvFile:
     ]
 showMsg_list(gramList_csvRead,2.5)
 test('在读取文件的第四步中，使用什么循环结构遍历读取对象？','for','葫芦装载值+1')
+
+gramList_csvWrite = [
+    '以上是读取文件内容的四个步骤，',
+    '写入文件同样也是四个步骤，'
+    '第一步，使用open()函数打开文件'
+    '\t不同的是，读取模式改为"w"或"a"',
+    '第二步，使用with ...  as ... 关键字将打开的文件保存在文件对象中，'
+    'with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:'
+    '第三步，导入csv模块，使用csv模块中的函数从文件对象中获取     写入对象    中。',
+    '''
+import csv    #导入CSV模块
+with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:    #使用  末尾追加写入模式  打开heros.csv文件
+    writer = csv.writer(csvFile)     #获取写入对象
+    ''',
+    '第四步，将数据写入文件中。'
+    '''
+import csv    #导入CSV模块
+with open("heros.csv", "a", encoding="utf-8-sig") as csvFile:    #使用  末尾追加写入模式  打开heros.csv文件
+    writer = csv.writer(csvFile)     #获取写入对象
+    writer.writerow(newHeroList)    #写入一行列表
+    writer.writerows(newHerosList)    #写入多行列表
+    '''
+    ]
+showMsg_list(gramList_csvWrite,2.5)
+test('打开文件后的操作（读取/写入）需要在with模块下缩进(行前空4格)处理，yes/no ?','yes','葫芦装载值+1')
 
 #知识点分割
 print_sleep('********************************************************************',2)
