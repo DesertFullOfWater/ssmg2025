@@ -29,11 +29,11 @@ print('''欢迎光临木子奶茶店，我们有：
 
 #创建  奶茶菜单  空列表   milkTeaList
 milkTeaList = []
-# 读取奶茶菜单文件 奶茶菜单.csv，打印奶茶菜单
-with open("08奶茶菜单.csv","r",encoding="utf-8-sig") as f:
-    reader = csv.reader(f)
-    for row in reader:
-        milkTeaList.append(row)
+# 打开奶茶菜单文件 08奶茶菜单.csv，打印奶茶菜单
+with open("08奶茶菜单.csv","r",encoding="utf-8-sig") 【1】 f:
+    reader = csv.reader(f)  #获取读取对象
+    【2】 row in reader:    #循环遍历读取对象
+        milkTeaList.append(row)    #将文件中每行数据存入菜单列表
         print(row[0]+".  "+row[1]+"\t￥"+row[2])
   
 '''
@@ -107,7 +107,7 @@ milkTeaNo = input('请问小主需要喝点什么?(输入产品序号)')
 while milkTeaNo!='':
     try:
         int(milkTeaNo)
-    except ValueError:
+    【3】 ValueError:
         print('不好意思，您所需的产品，小店暂时没有！')
     else:
         #完成点一杯奶茶的操作
@@ -120,7 +120,15 @@ while milkTeaNo!='':
 #显示已点奶茶信息，与客户确认    
 showOrderList(milkTeaOrderList)
 
-with open("奶茶订单.csv","a",encoding="utf-8-sig", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerows(milkTeaOrderList)
+# 打开奶茶订单文件 08奶茶订单.csv，存入奶茶订单信息
+with 【4】("08奶茶订单.csv","【5】",encoding="utf-8-sig", newline="") as f:
+    writer = csv.writer(【6】)  #获取写入对象
+    writer.writerows(milkTeaOrderList)  #将已点奶茶信息列表存入奶茶订单文件
+
+print("制作中，请稍后。")
+for i in range(50):
+    time.sleep(0.1)
+    print("*",end="")
+print()
+
 print('订单已完成')
