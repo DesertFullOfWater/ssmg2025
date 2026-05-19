@@ -119,7 +119,7 @@ while milkTeaNo!='':
 #显示已点奶茶信息，与客户确认    
 showOrderList(milkTeaOrderList)
 
-with open("奶茶订单.csv","a",encoding="utf-8-sig") as f:
+with open("奶茶订单.csv","a",encoding="utf-8-sig", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(milkTeaOrderList)
 print('订单已完成')
