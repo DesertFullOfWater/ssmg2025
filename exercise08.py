@@ -21,7 +21,7 @@ import csv
 # ======================
 with open("08heros.csv", "r", encoding="utf-8-sig") as f:
     reader = csv.reader(f)
-    for row in reader:
+    for row 【1】 【2】:
         print('姓名：',row[0],'\t封号：',row[3])
         
 print("✅ 所有英雄封号打印完毕！")
@@ -33,8 +33,8 @@ print("✅ 所有英雄封号打印完毕！")
 #               3.讲109人信息写入文件的最后一行
 # ======================
 new_hero = ["李二狗","109","魔法杖","艾莎公主"]
-with open("08heros.csv", "a", encoding="utf-8-sig", newline="") as f:
-    writer = csv.writer(f)
+【3】 【4】("08heros.csv", "a", encoding="utf-8-sig", newline="") as f:
+    writer = csv.writer(【5】)
     writer.writerow(new_hero)
 
 print("✅ 李二狗已追加到最后一行！")
