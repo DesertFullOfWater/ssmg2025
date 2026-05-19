@@ -187,34 +187,47 @@ gramList_csv = [
     '\n----------------  CSV 格式预览 ----------------\n姓名,排名,兵器,封号\n宋江,1,锟铻剑,呼保义\n卢俊义,2,麒麟黄金枪,玉麒麟\n吴用,3,七星坛羽扇,智多星\n',
     ]
 showMsg_list(gramList_csv,2.5)
-test('使用英文逗号分隔值的纯文本文件，是什么文件？','CSV','葫芦装载值+1')
+test('使用英文逗号分隔值的纯文本文件，是什么类型的文件(大写字母)？','CSV','葫芦装载值+1')
 
-gramList_csvRead = [
+gramList_csvOpen = [
     '勇士，CSV文件材料有了。',
     '接下来，你将轻松get在程序中读写文件的技能。',
-    '这样，可能出现异常的代码，无论是否遇到异常，都能按正常逻辑运行',
-    '此时，只要是只要对前面查找"李二狗"序号的程序稍加修改,',
-    '即可对任一英雄的排名进行查找'
+    '第一步，我们需要使用open()函数打开文件',
+    'open(file,mode,encoding......)',
+    'open()函数参数列表：\n1.file\t\t文件路径/文件名称\n2.mode\t\t文件打开模式：\n\t"r"读取模式、"w"覆盖写入模式、"a"在文件末尾追加写入模式\n3.encoding\t编码方式:目前使用utf-8-sig格式，该格式可以使用excel或记事本打开CSV文件',
+    ]
+showMsg_list(gramList_csvOpen,2.5)
+test('在程序中，如果需要在某个CSV文件的末尾添加数据，那么在打开该文件时，使用什么模式打开呢？','a','葫芦装载值+1')
+
+gramList_csvVar = [
+    '第二步，使用with ...  as ... 关键字将打开的文件保存在文件对象中，',
+    'with open() as 文件对象:',
+    '例：\nwith open("heros.csv", "r", encoding="utf-8-sig") as csvFile:'
+    ]
+showMsg_list(gramList_csvVar,2.5)
+test('在上一行程序中，打开的是哪一个文件呢？','heros.csv','葫芦装载值+1')
+test('在上一行程序中，打开的文件存放在程序的哪个文件对象中呢？','csvFile','葫芦装载值+1')
+
+gramList_csvRead = [
+    '第三步，导入csv模块，使用csv模块中的函数从文件对象中获取读取对象中。',
+    '''
+import csv    #导入CSV模块
+with open("heros.csv", "r", encoding="utf-8-sig") as csvFile:
+    reader = csv.reader(csvFile)     #获取读取对象
+    ''',
+    '第四步，在程序中按行处理文件中的数据',
+    '''
+import csv    #导入CSV模块
+with open("heros.csv", "r", encoding="utf-8-sig") as csvFile:
+    reader = csv.reader(csvFile)     #获取读取对象
+    for row in reader:    #遍历读取对象，依次获取文件每一行的信息
+        print(row)
+    ''',    
     ]
 showMsg_list(gramList_csvRead,2.5)
-test('在try模块中程序出现异常，会执行哪个模块的内容？','except','葫芦装载值+1')
-
-gramList_errorType = [
-    '除了列表下标这样的ValueError错误，常见内置异常类型还有',
-    '''
-    异常类型\t\t含义\t\t场景举例
-    ZeroDivisionError\t\t除零错误\t5 / 0
-    IndexError\t\t索引越界\t\t列表下标超出范围
-    KeyError\t\t字典键不存在\t字典取不存在的键
-    ValueError\t\t值错误\t\t输入字符串转数字失败
-    TypeError\t\t类型错误\t\t数字和字符串相加
-    ''',
-    '按照 try-except 这样的异常捕捉语法格式，',
-    '以上可能出现异常的语句均可正常运行,不会导致程序崩溃'
-    ]
-showMsg_list(gramList_errorType,2.5)
+test('在读取文件的第四步中，使用什么循环结构遍历读取对象？','for','葫芦装载值+1')
 
 #知识点分割
 print_sleep('********************************************************************',2)
-print_sleep('恭喜！拂尘净化力已加满！',1)
-print_sleep('接下来，你可以选择向公主殿下提问，或完成exercise07，再完成task07！',1)
+print_sleep('恭喜！葫芦装载值已加满！',1)
+print_sleep('接下来，你可以选择向公主殿下提问，或完成exercise08，再完成task08！',1)
