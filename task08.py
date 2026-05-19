@@ -27,6 +27,7 @@ import csv
 print('''欢迎光临木子奶茶店，我们有：
 ''')
 
+#创建  奶茶菜单  空列表   milkTeaList
 milkTeaList = []
 # 读取奶茶菜单文件 奶茶菜单.csv，打印奶茶菜单
 with open("08奶茶菜单.csv","r",encoding="utf-8-sig") as f:
